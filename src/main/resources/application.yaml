@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: native-testing
+  main:
+    banner-mode: off
+
