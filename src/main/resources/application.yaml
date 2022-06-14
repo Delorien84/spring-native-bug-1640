@@ -1,6 +1,19 @@
 spring:
   application:
     name: native-testing
+  datasource:
+      url: jdbc:postgresql://localhost:5432/report
+      username: report
+      password: report
+    hikari:
+      maximum-pool-size: 2
+      minimum-idle: 0
   main:
     banner-mode: off
+  thymeleaf:
+    check-template-location: false
 
+report:
+  email:
+    to: [ "stiller@foo.bar" ]
+    from: "infra-noreply@foo.bar"

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>My2N</title>
+    <style type="text/css" media="screen">* {
+        margin: 0;
+        padding: 0
+    }
+
+    body {
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: none;
+        width: 100% !important;
+        height: 100%
+    }
+
+    a {
+        color: #2ba6cb
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: Verdana, Arial, 'Arial CE', sans-serif !important;
+        line-height: 1.1;
+        margin-bottom: 15px;
+        color: #000
+    }
+
+    h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+        font-size: 60%;
+        color: #6f6f6f;
+        line-height: 0;
+        text-transform: none
+    }
+
+    h1 {
+        font-size: 44px
+    }
+
+    h1, h2 {
+        font-weight: 200
+    }
+
+    h2 {
+        font-size: 37px
+    }
+
+    h3 {
+        font-size: 27px
+    }
+
+    h3, h4 {
+        font-weight: 500
+    }
+
+    h4 {
+        font-size: 23px
+    }
+
+    h5 {
+        font-size: 17px
+    }
+
+    h5, h6 {
+        font-weight: 900
+    }
+
+    h6 {
+        text-transform: uppercase;
+        color: #444
+    }
+
+    h6, p, ul {
+        font-size: 14px
+    }
+
+    p, ul {
+        margin-bottom: 10px;
+        font-weight: 400;
+        line-height: 1.6
+    }
+
+    ul li {
+        margin-left: 5px;
+        list-style-position: inside
+    }
+
+    .container {
+        display: block !important;
+        max-width: 700px !important;
+        margin: 0 auto !important;
+        clear: both !important
+    }
+
+    .content {
+        padding: 15px;
+        max-width: 700px;
+        margin: 0 auto;
+        display: block
+    }
+
+    .content table {
+        width: 100%
+    }
+
+    .clear {
+        display: block;
+        clear: both
+    }
+
+    p {
+        font-family: Verdana, Arial, 'Arial CE', sans-serif !important;
+    }</style>
+</head>
+<body bgcolor="#FFFFFF" style="background-color: #ffffff;font-family: Verdana, Arial,'Arial CE', sans-serif;margin: 0;padding: 0; width: 100%!important;height: 100%;">
+<table bgcolor="#212121" style="background-color: #212121;width: 100%;">
+    <tr>
+        <td/>
+        <td class="header container">
+            <div style="padding: 0;font-size: 11px;height: 62px;">
+                <table bgcolor="#212121" style="width:100%">
+                    <tr>
+                        <td style="line-height: 60px">
+                            <a href="https://my2n.com" style="text-decoration: none; color: #fefefe;font-size:28px;font-family: Verdana, Arial,'Arial CE', sans-serif;">
+                              <span style="color: #fefefe;">
+                                 My<b>2N</b>
+                              </span>
+                            </a>
+                        </td>
+                        <td align="right"/>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td/>
+    </tr>
+</table>
+<table style="width: 100%;background-color: #e1e1e1;" bgcolor="#e1e1e1">
+    <tr>
+        <td/>
+        <td class="subheader container">
+            <div style="padding: 50px; max-width: 700px;margin: 0 auto;display: block;">
+                <table bgcolor="#e1e1e1" style="width:100%">
+                    <tr>
+                        <td>
+                            <p style="color:#0091ea;font-size:22px;font-weight:bold;text-align:center" th:text="|Report - ${environment}|"></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td/>
+    </tr>
+</table>
+<table style="width: 100%;background-color: #e1e1e1;" bgcolor="#e1e1e1">
+    <tr>
+        <td/>
+        <td class="container" style="background-color: #e1e1e1;" bgcolor="#e1e1e1">
+            <div style="padding: 20px; padding-top: 0; max-width: 700px;margin: 0 auto;display: block;">
+                <table style="background-color: #fff; width: 100%;" bgcolor="#fff">
+                    <tr>
+                        <td>
+                            <div style="padding: 30px;font-family: Verdana, Arial,'Arial CE', sans-serif;">
+
+                                <p><strong th:text="|Automatically generated report from environment ${environment}|"></strong></p>
+
+                                <table border="1">
+                                    <tbody>
+                                    <tr>
+                                        <th align="center">column1</th>
+                                        <th align="center">column2</th>
+                                    </tr>
+                                    <tr th:each="row : ${data}">
+                                        <td align="left" th:text="${row.column1}">{{column1}}</td>
+                                        <td align="left" th:text="${row.column1}">{{column1}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <p>Please do not reply to this automatically generated e-mail.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td/>
+    </tr>
+</table>
+<table bgcolor="#3f3f3f" style="width: 100%;clear:both !important;background-color: #fff;border-top: solid 1px #959595;">
+    <tr>
+        <td/>
+        <td style="font-size: 14px;color: #999999;">
+            <div style="padding: 25px;padding-top: 60px; padding-bottom: 60px; max-width: 700px;margin: 0 auto;display: block;">
+                <table bgcolor="#fff" style="width:100%">
+                    <tr>
+                        <td>
+                            <img src="https://my2n.com/img/logom.png" alt="2N"/>
+                        </td>
+                        <td align="right">
+                            <a href="https://www.2n.com" style="color: #222">
+                                www.<b>2n.com</b>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td/>
+    </tr>
+</table>
+</body>
+</html>
